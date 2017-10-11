@@ -15,6 +15,8 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        //侧滑删除的那个 仓库
+        maven { url 'https://jitpack.io' }
     }
 }
 

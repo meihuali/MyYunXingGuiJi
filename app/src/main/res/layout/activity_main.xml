@@ -14,12 +14,36 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="硬件运动轨迹演示" />
-    <ListView
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <EditText
+            android:hint="                      请添加设备号："
+            android:id="@+id/et_body"
+            android:layout_width="3dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+        <Button
+            android:id="@+id/btn_coimit"
+            android:text="确定"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRv"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+    </android.support.v7.widget.RecyclerView>
+<!--    <ListView
         android:id="@+id/lsv_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
-    </ListView>
+    </ListView>-->
 
 </LinearLayout>

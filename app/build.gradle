@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.xiao.myappdemobaidu"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -32,6 +32,26 @@ android {
 
 
 }
+//greendao数据库相关配置
+apply plugin: 'org.greenrobot.greendao'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.example.anonymous.greendao.gen'
+    targetGenDir 'src/main/java'
+}
+
+
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -45,6 +65,14 @@ dependencies {
     /*RxVollye*/
     compile 'com.kymjs.rxvolley:rxvolley:1.1.4'
     compile 'com.google.code.gson:gson:2.8.0'
+    //侧滑删除的依赖
+    compile 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    //侧滑删除的 依赖
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.2'
 
-
+    //数据库 grrendaao
+    compile'org.greenrobot:greendao:3.0.1'
+    compile'org.greenrobot:greendao-generator:3.0.0'
+    //okgo 地址https://github.com/jeasonlzy/okhttp-OkGo
+    compile 'com.lzy.net:okgo:3.0.4'
 }
