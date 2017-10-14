@@ -56,6 +56,7 @@ import com.kymjs.rxvolley.client.HttpCallback;
 import com.kymjs.rxvolley.http.VolleyError;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -226,6 +227,8 @@ public class ShowBaidu extends AppCompatActivity implements LocationSource, AMap
     public void showResult(Object object) {
         LatitudeandlongitudeBean latitude = (LatitudeandlongitudeBean) object;
         List<LatitudeandlongitudeBean.MsgBean> mlist = latitude.getMsg();
+        //集合倒叙
+        Collections.reverse(mlist);
         pares(mlist);
     }
 

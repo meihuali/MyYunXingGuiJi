@@ -24,9 +24,11 @@ public class GetLatitudeAndLongitudeImpl implements IsGetLatitudeAndLongitudeMod
     @Override
     public void getjingweidu(final getjingweiduLineres lineres, String num, String limit) {
         // 862151031232711
+       // 862151031207812
+
         String url =  "http://lock.sunsyi.com/trajectory/public/index.php/index/index/getdata";
         OkGo.<String>post(url)
-                .params("num","862151031232711")
+                .params("num",num)
                 .params("limit",limit)
                 .execute(new StringCallback() {
                     @Override
